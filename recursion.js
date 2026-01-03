@@ -69,22 +69,52 @@
 
 // sumofarr[0]
 
-let arr = [1,2,3,4,5]
-function sum(n){
-    idOdd=  (arr[n] %2 !=0);
-    if(n==0){
-        if(idOdd){
-            return arr[n]
-        }
-        else return 0;
-    }
+// let arr = [1,2,3,4,5]
+// function sum(n){
+//     idOdd=  (arr[n] %2 !=0);
+//     if(n==0){
+//         if(idOdd){
+//             return arr[n]
+//         }
+//         else return 0;
+//     }
 
-    if(idOdd){
-        return arr[n] + sum(n-1)
+//     if(idOdd){
+//         return arr[n] + sum(n-1)
+//     }
+//     else{
+//         return 0+sum(n-1)
+//     }
+// }
+// sum(arr.length-1)
+// console.log(sum(arr.length-1))  
+
+
+
+// // factorial of the numbers
+// let mul = 1;
+// function factorial(n){
+//     if(n ==0){
+//         return ;
+//     }
+//     mul *= n;
+//     factorial(n-1)
+// }
+// factorial(5)
+// console.log(mul)
+
+
+var isPowerOfTwo = function(n) {
+
+    let x = 0
+    function compare(x){
+        if(2**x ==n){
+            return true;
+        }
+        compare(++x)
     }
-    else{
-        return 0+sum(n-1)
-    }
-}
-sum(arr.length-1)
-console.log(sum(arr.length-1))  
+    compare(x)
+    
+};
+
+console.log(isPowerOfTwo(16))
